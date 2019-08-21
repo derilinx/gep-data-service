@@ -13,7 +13,7 @@ const redisCacheTtl = config.get('redis.cacheTtl');
 
 const server = Hapi.server({
   port: process.env.PORT || 3000,
-  host: 'localhost',
+  host: process.env.LISTEN || 'localhost',
   routes: {
     cors: true
   }
